@@ -13,7 +13,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
-
+import Logowhite from "../../assets/logowhite.png";
 const pages = ["Qui sommes nous ?", "Services", "Témoignages", "Contact"];
 const sectionIds = [ "presentation-section", "seances-section", "testimonials-section", "contact-section"];
 
@@ -39,7 +39,8 @@ function ResponsiveAppBar({ onNavigate }) {
     >
       <Container maxWidth="xl">
         <Toolbar variant="dense">
-          <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+          <img src={Logowhite} alt="logo" height={40} width={40} />
+          {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"
             noWrap
@@ -47,6 +48,7 @@ function ResponsiveAppBar({ onNavigate }) {
             href="#responsive-app-bar"
             sx={{
               mr: 2,
+              ml: 1,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
               fontWeight: 700,
@@ -55,7 +57,7 @@ function ResponsiveAppBar({ onNavigate }) {
               textDecoration: "none",
             }}
           >
-            Sbai Mohamed
+          {'Mohamed Sbai'}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
