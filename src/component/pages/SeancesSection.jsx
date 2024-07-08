@@ -50,7 +50,7 @@ function SeancesSection() {
          
         </Grid> */}
         {titles.map((title, index) => (
-          <Grid item xs={12} md={6} key={title}>
+          <Grid item xs={12} md={4} key={title}>
             <Card>
               <CardHeader
                 title={title}

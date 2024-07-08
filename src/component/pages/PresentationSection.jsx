@@ -26,12 +26,17 @@ import { Fade, Slide } from "react-awesome-reveal";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import ReactPlayer from "react-player";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
+import BackCards from "../images/wavesCards.svg";
 // Styled component for hover effect
 const CustomCard = styled(Card)(({ theme }) => ({
   transition: "0.3s",
   "&:hover": {
     transform: "scale(1.05)",
   },
+  backgroundImage: `url(${BackCards})`,
+  backgroundSize: "cover",
+  backgroundPosition: "bottom",
+
 }));
 
 // Styled component for social link background
@@ -50,7 +55,9 @@ const SocialLink = styled("a")(({ theme, gradient }) => ({
 function PresentationSection() {
   return (
     <>
-      <Container sx={{ py: 3 }}>
+    <Box  sx={{ backgroundColor : theme.palette.one.main}}>
+
+    <Container sx={{ py: 3 }}>
         <Fade direction="up" className="">
           <Typography
             variant="h2"
@@ -200,7 +207,9 @@ function PresentationSection() {
           </Link>
         </Box>
       </Container>
-      <Box sx={{ mt: 2, bgcolor: theme.palette.one.main, p: 6 }}>
+    
+    </Box>
+    <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
         <Typography variant="h3" component="h2" gutterBottom>
           Rencontrez Mohamed Sbai
           <Box
