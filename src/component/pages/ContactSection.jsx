@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Typography, Container } from "@mui/material";
-
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
 function ContactSection() {
   const [formData, setFormData] = useState({
     email: "",
@@ -26,7 +26,7 @@ function ContactSection() {
 
   return (
     <Container sx={{py : 9}}>
-      <Typography variant="h3" component="h2" textAlign="start" >
+      <Typography variant="h3" component="h2" textAlign="start"  gutterBottom>
         Contactez-nous ou Prenez un rendez-vous
       </Typography>
 
@@ -39,6 +39,8 @@ function ContactSection() {
           alignItems: "center",
           justifyContent: "center",
           padding: 10,
+          borderRadius: 2,
+          boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .3)",
         }}
         noValidate
         autoComplete="off"
@@ -51,6 +53,7 @@ function ContactSection() {
           type="email"
           value={formData.email}
           onChange={handleChange}
+          
         />
         <TextField
           required
@@ -77,7 +80,7 @@ function ContactSection() {
           onChange={handleChange}
         />
         <button className="bn54 p-3" type="submit">
-          <span className="bn54span">Envoyer</span>
+          <span className="bn54span"> <MailOutlineIcon /> Envoyer</span>
         </button>
       </Box>
     </Container>

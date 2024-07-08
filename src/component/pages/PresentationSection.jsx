@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   ListItemText,
+  Paper,
 } from "@mui/material";
 // Import Material-UI icons
 import AnchorIcon from "@mui/icons-material/Anchor";
@@ -72,6 +73,7 @@ function PresentationSection() {
           <div className="player-wrapper">
             <h4>Vidéo de présentation</h4>
             <br />
+            <Paper sx={{p:3 , mb : 4}}>
             <ReactPlayer
               className="react-player rounded-lg"
               url="chemin/vers/votre/video.mp4"
@@ -82,6 +84,9 @@ function PresentationSection() {
               light={true}
               pip={true}
             />
+
+            </Paper>
+          
           </div>
 
           <div className="flex items-center gap-4 justify-end mb-6">
