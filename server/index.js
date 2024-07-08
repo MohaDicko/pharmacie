@@ -30,4 +30,7 @@ mongoose.connect(process.env.MONGODB_URI).then(() => {
 const UserRoutes = require("./routes/UserRoutes");
 app.use("/api", UserRoutes);
 
+const FormationRoutes = require("./routes/FormationRoutes");
+app.use("/api/formations", FormationRoutes);
+
 app.listen(8000, () => console.log(`server is running on port 8000`));
