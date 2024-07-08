@@ -1,5 +1,14 @@
 import React from "react";
-import { Container, Grid, Card, CardHeader, CardMedia, CardContent, Typography, Tooltip } from "@mui/material";
+import {
+  Container,
+  Grid,
+  Card,
+  CardHeader,
+  CardMedia,
+  CardContent,
+  Typography,
+  Tooltip,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import M1 from "../images/M1.webp";
 import M2 from "../images/M2.webp";
@@ -25,9 +34,11 @@ function SeancesSection() {
   ];
 
   const images = [M3, M1];
-  const titles = ["Séance d'hypnose en presentiel", "Séance d'hypnose en ligne", 
+  const titles = [
+    "Séance d'hypnose en presentiel",
+    "Séance d'hypnose en ligne",
     // "Conférences et interventions"
-];
+  ];
 
   return (
     <Container sx={{ py: 9 }}>
@@ -35,11 +46,22 @@ function SeancesSection() {
         Séances
       </Typography>
       <Grid container spacing={3} mt={3}>
+        {/* <Grid item xs={12} md={12} key={"title"}>
+         
+        </Grid> */}
         {titles.map((title, index) => (
           <Grid item xs={12} md={6} key={title}>
             <Card>
-              <CardHeader title={title} titleTypographyProps={{ noWrap: true }} />
-              <CardMedia component="img" style={imageStyle} image={images[index]} alt={title} />
+              <CardHeader
+                title={title}
+                titleTypographyProps={{ noWrap: true }}
+              />
+              <CardMedia
+                component="img"
+                style={imageStyle}
+                image={images[index]}
+                alt={title}
+              />
               <CardContent sx={cardStyle}>
                 <Tooltip title={tooltipTexts[index]} placement="top" arrow>
                   <Typography>{tooltipTexts}</Typography>

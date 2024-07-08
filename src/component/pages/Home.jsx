@@ -5,6 +5,7 @@ import SeancesSection from "./SeancesSection";
 import ContactSection from "./ContactSection";
 import Testimonials from "./Testimonials";
 import ResponsiveAppBar from "../layout/header";
+import FormationsSection from "./FormationsSection";
 
 function Home() {
   const scrollToSection = (sectionId) => {
@@ -13,15 +14,19 @@ function Home() {
 
   return (
     <>
-      <ResponsiveAppBar onNavigate={scrollToSection} />
+      
       <div id="hero-section">
         <HeroSection />
       </div>
       <div id="presentation-section">
         <PresentationSection />
       </div>
+   
       <div id="seances-section">
         <SeancesSection />
+      </div>
+      <div id="Formations-section">
+        <FormationsSection/> 
       </div>
       <div id="testimonials-section">
         <Testimonials />

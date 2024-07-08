@@ -25,8 +25,8 @@ function ContactSection() {
   };
 
   return (
-    <Container>
-      <Typography variant="h3" component="h2" textAlign="start" gutterBottom>
+    <Container sx={{py : 9}}>
+      <Typography variant="h3" component="h2" textAlign="start" >
         Contactez-nous ou Prenez un rendez-vous
       </Typography>
 

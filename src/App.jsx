@@ -9,10 +9,14 @@ import CssBaseline from '@mui/material/CssBaseline';
 
 
 function App() {
+  const scrollToSection = (sectionId) => {
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
     <>
       <ThemeProvider theme={theme}>
       <CssBaseline />
+      <ResponsiveAppBar onNavigate={scrollToSection} />
         {/* <ResponsiveAppBar /> */}
         <BrowserRouter>
           <Routes>

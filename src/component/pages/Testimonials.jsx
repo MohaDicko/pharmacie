@@ -1,32 +1,33 @@
 import React from "react";
-import { Card, CardContent, Typography, Avatar, Box } from "@mui/material";
+import {
+  Card,
+  Box,
+  Grid,
+  Container,
+  Typography,
+  Paper,
+  CardContent,
+} from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import ReactPlayer from "react-player";
+import HalimaVideo from "../images/halimaalaoui.mp4";
+import Intervention from "../images/intevention.mp4";
+import image1 from "../images/testimonialIG/1.jpeg";
+import image2 from "../images/testimonialIG/2.jpeg";
+import image3 from "../images/testimonialIG/3.jpeg";
+import image4 from "../images/testimonialIG/4.jpeg";
+import image5 from "../images/testimonialIG/5.jpeg";
 
+// Mise à jour du tableau pour utiliser les images importées
 const testimonials = [
-  // Ajoutez 3 témoignages supplémentaires ici pour faire un total de 6
-  {
-    name: "John Doe",
-    text: "Ce service est incroyable! J'ai vu une amélioration significative après seulement quelques sessions.",
-    avatar: "/path/to/avatar1.jpg",
-  },
-  {
-    name: "John Doe",
-    text: "Ce service est incroyable! J'ai vu une amélioration significative après seulement quelques sessions.",
-    avatar: "/path/to/avatar1.jpg",
-  },
-  {
-    name: "John Doe",
-    text: "Ce service est incroyable! J'ai vu une amélioration significative après seulement quelques sessions.",
-    avatar: "/path/to/avatar1.jpg",
-  },
-  {
-    name: "John Doe",
-    text: "Ce service est incroyable! J'ai vu une amélioration significative après seulement quelques sessions.",
-    avatar: "/path/to/avatar1.jpg",
-  },
-  // Les autres témoignages...
+  { image: image1 },
+  { image: image2 },
+  { image: image3 },
+  { image: image4 },
+  { image: image5 },
+  // Ajoutez d'autres images si nécessaire
 ];
 
 function Testimonials() {
@@ -42,7 +43,7 @@ function Testimonials() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 2,
           infinite: true,
           dots: true,
@@ -60,38 +61,91 @@ function Testimonials() {
   };
 
   return (
-    <Box sx={{ flexGrow: 1, padding: 5 }}>
-       <Typography variant="h3" component="h2" textAlign="start" gutterBottom>
-        Témoignages
-      </Typography>
-      <Slider {...settings}>
-        {testimonials.map((testimonial, index) => (
-          <div key={index} className="p-6">
-            <Card>
-              <CardContent>
-                <Box
-                  display="flex"
-                  flexDirection="column"
-                  alignItems="center"
-                  paddingBottom={2}
-                >
-                  <Avatar
-                    src={testimonial.avatar}
-                    sx={{ width: 56, height: 56, marginBottom: 2 }}
+    <>
+      <Container>
+        <Grid container spacing={3} mt={3}>
+          <Grid item xs={12} md={12} key={"title"}>
+            <Typography
+              variant="h3"
+              component="h2"
+              textAlign="start"
+              gutterBottom
+            >
+              Intérventions et Live Radio
+            </Typography>
+            <Grid container spacing={3} mt={3}>
+              <Grid item xs={12} md={6} key={"video"}>
+                <Paper className="p-4">
+                  <ReactPlayer
+                    className="react-player rounded-lg"
+                    url={Intervention}
+                    width={"100%"}
+                    height={350}
+                    controls={true}
+                    pip={true}
+                    muted={true}
+                    style={{ borderRadius: "10px" }}
                   />
-                  <Typography variant="h6" gutterBottom>
-                    {testimonial.name}
-                  </Typography>
-                </Box>
-                <Typography variant="body2" color="text.secondary">
-                  {testimonial.text}
-                </Typography>
-              </CardContent>
-            </Card>
-          </div>
-        ))}
-      </Slider>
-    </Box>
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={6} key={"video"}>
+                <Paper className="p-4">
+                  <ReactPlayer
+                    className="react-player rounded-lg"
+                    url={HalimaVideo}
+                    width={"100%"}
+                    height={350}
+                    controls={true}
+                    pip={true}
+                    muted={true}
+                    style={{ borderRadius: "10px" }}
+                  />
+                </Paper>
+              </Grid>
+            </Grid>
+          </Grid>
+
+          <Grid item xs={12} md={12} key={"slider"}>
+            <Typography
+              variant="h3"
+              component="h2"
+              textAlign="start"
+              gutterBottom
+            >
+              Témoignages
+            </Typography>
+            <Box sx={{ flexGrow: 1, padding: 5 }}>
+              <Slider {...settings}>
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} className="p-6">
+                    <Card>
+                      <CardContent>
+                        <Box
+                          display="flex"
+                          flexDirection="column"
+                          alignItems="center"
+                          paddingBottom={2}
+                        >
+                          <img
+                            src={testimonial.image}
+                            alt={`Testimonial ${index + 1}`}
+                            style={{
+                              width: "100%",
+                              height: 300,
+                              objectFit: "contain",
+                            }}
+                          />
+                        </Box>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </Slider>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </>
   );
 }
 

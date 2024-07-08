@@ -14,8 +14,20 @@ import PhoneIcon from "@mui/icons-material/Phone";
 import { useTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
 import Logowhite from "../../assets/logowhite.png";
-const pages = ["Qui sommes nous ?", "Services", "Témoignages", "Contact"];
-const sectionIds = [ "presentation-section", "seances-section", "testimonials-section", "contact-section"];
+const pages = [
+  "Qui sommes nous ?",
+  "Services",
+  "Formations",
+  "Témoignages",
+  "Contact",
+];
+const sectionIds = [
+  "presentation-section",
+  "seances-section",
+  "Formations-section",
+  "testimonials-section",
+  "contact-section",
+];
 
 function ResponsiveAppBar({ onNavigate }) {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -51,14 +63,14 @@ function ResponsiveAppBar({ onNavigate }) {
               ml: 1,
               display: { xs: "none", md: "flex" },
               fontFamily: "Dancing Script",
-              fontWeight: 'bolder',
+              fontWeight: "bolder",
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
             className="titleLogo"
           >
-          {'Dr.SBAI'}
+            {"Dr.SBAI"}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

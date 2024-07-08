@@ -49,7 +49,7 @@ const SocialLink = styled("a")(({ theme, gradient }) => ({
 function PresentationSection() {
   return (
     <>
-      <Container sx={{ py: 9 }}>
+      <Container sx={{ py: 3}}>
         <Fade direction="up" className="">
           <Typography
             variant="h2"
