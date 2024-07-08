@@ -80,9 +80,10 @@ function PresentationSection() {
               width="100%"
               height="100%"
               controls={true}
-              playing={true}
+              // playing={true}
               light={true}
               pip={true}
+              
             />
 
             </Paper>

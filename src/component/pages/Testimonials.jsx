@@ -84,11 +84,11 @@ function Testimonials() {
                     controls={true}
                     pip={true}
                     muted={true}
-                    style={{ borderRadius: "10px" }}
+                    // light={true}
                   />
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={6} key={"video"}>
+              <Grid item xs={12} md={6} key={"video2"}>
                 <Paper className="p-4">
                   <ReactPlayer
                     className="react-player rounded-lg"
@@ -98,7 +98,6 @@ function Testimonials() {
                     controls={true}
                     pip={true}
                     muted={true}
-                    style={{ borderRadius: "10px" }}
                   />
                 </Paper>
               </Grid>

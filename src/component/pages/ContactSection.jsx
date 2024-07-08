@@ -38,7 +38,7 @@ function ContactSection() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          padding: 10,
+          padding: 2,
           borderRadius: 2,
           boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .3)",
         }}
