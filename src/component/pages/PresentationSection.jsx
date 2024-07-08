@@ -50,7 +50,7 @@ const SocialLink = styled("a")(({ theme, gradient }) => ({
 function PresentationSection() {
   return (
     <>
-      <Container sx={{ py: 3}}>
+      <Container sx={{ py: 3 }}>
         <Fade direction="up" className="">
           <Typography
             variant="h2"
@@ -58,7 +58,7 @@ function PresentationSection() {
             textAlign="start"
             gutterBottom
           >
-            Dr Mohamed Sbai
+            Mohamed Sbai
           </Typography>
           <Typography
             variant="h4"
@@ -66,28 +66,25 @@ function PresentationSection() {
             textAlign="start"
             gutterBottom
           >
-            Hypnopraticien, Energicien et coach psychoemotionnel
+            Hypnopraticien, Energicien, coach psychoemotionnel & formateur
           </Typography>
         </Fade>
         <Container maxWidth={"md"} className="text-center p-2">
           <div className="player-wrapper">
             <h4>Vidéo de présentation</h4>
             <br />
-            <Paper sx={{p:3 , mb : 4}}>
-            <ReactPlayer
-              className="react-player rounded-lg"
-              url="chemin/vers/votre/video.mp4"
-              width="100%"
-              height="100%"
-              controls={true}
-              // playing={true}
-              light={true}
-              pip={true}
-              
-            />
-
+            <Paper sx={{ p: 3, mb: 4 }}>
+              <ReactPlayer
+                className="react-player rounded-lg"
+                url="chemin/vers/votre/video.mp4"
+                width="100%"
+                height="100%"
+                controls={true}
+                // playing={true}
+                light={true}
+                pip={true}
+              />
             </Paper>
-          
           </div>
 
           <div className="flex items-center gap-4 justify-end mb-6">
@@ -143,7 +140,7 @@ function PresentationSection() {
           </List>
         </Container>
         <Typography variant="h3" component="h2" textAlign="start" gutterBottom>
-          Soins & prestations
+          Accompagnements 
         </Typography>
 
         <Grid container spacing={3} mt={3}>

@@ -13,7 +13,7 @@ import PhoneIcon from "@mui/icons-material/Phone";
 // import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
-import Logowhite from "../../assets/logowhite.png";
+import Logowhite from "../../assets/white png.png";
 const pages = [
   "Qui sommes nous ?",
   "Services",
@@ -70,7 +70,7 @@ function ResponsiveAppBar({ onNavigate }) {
             }}
             className="titleLogo"
           >
-            {"Dr.SBAI"}
+            {"M.SBAI"}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

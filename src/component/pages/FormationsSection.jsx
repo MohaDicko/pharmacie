@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Container, Typography, Card, CardContent, Grid } from "@mui/material";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
 
@@ -27,7 +27,7 @@ function FormationsSection() {
     slidesToScroll: 3,
     autoplay: true,
     autoplaySpeed: 2000,
-    cssEase: "linear"
+    cssEase: "linear",
   };
 
   return (
@@ -37,19 +37,19 @@ function FormationsSection() {
       </Typography>
       <Slider {...settings}>
         {formations.map((formation) => (
-          <motion.div key={formation._id}
+          <motion.div
+            key={formation._id}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            
             <Card>
               <CardContent>
                 <Typography variant="h5" component="h2">
                   {formation.title}
                 </Typography>
                 <Typography color="textSecondary">
-                  {formation.description}
+                  {formation.description}- {formation.price}
                 </Typography>
                 {/* Ajoutez plus de détails ici si nécessaire */}
               </CardContent>
