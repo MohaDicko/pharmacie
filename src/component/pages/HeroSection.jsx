@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import React from "react";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image1 from "../images/Clinical-hypnotherapy.webp";
 import Image2 from "../images/hypnotherapy2.jpg";
@@ -17,7 +17,7 @@ function HeroSection() {
     autoplay: true, // Active l'autoplay
     autoplaySpeed: 3000, // Vitesse de l'autoplay (3000ms = 3s)
     fade: true, // Ajoute un effet de fondu entre les diapositives
-    cssEase: 'linear' // Assure une transition douce
+    cssEase: "linear", // Assure une transition douce
   };
 
   return (
@@ -29,7 +29,7 @@ function HeroSection() {
         </div>
         <div className="image-container">
           <img src={Image2} alt="Image2" />
-          <h3>Calme, confiance en soi, contrôle de la situation</h3>
+          <h3>Calme, confiance en soi</h3>
         </div>
         <div className="image-container">
           <img src={Image3} alt="Image3" />

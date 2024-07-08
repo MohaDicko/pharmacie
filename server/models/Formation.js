@@ -17,7 +17,7 @@ const FormationSchema = new mongoose.Schema(
     },
     dateFormation: {
       type: Date,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
