@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import PhoneIcon from "@mui/icons-material/Phone";
-import AdbIcon from "@mui/icons-material/Adb";
+// import AdbIcon from "@mui/icons-material/Adb";
 import { useTheme } from "@mui/material/styles";
 import { Button } from "@mui/material";
 import Logowhite from "../../assets/logowhite.png";
@@ -45,19 +45,20 @@ function ResponsiveAppBar({ onNavigate }) {
             variant="h6"
             noWrap
             component="a"
-            href="#responsive-app-bar"
+            href="/"
             sx={{
               mr: 2,
               ml: 1,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
+              fontFamily: "Dancing Script",
+              fontWeight: 'bolder',
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
+            className="titleLogo"
           >
-          {'Mohamed Sbai'}
+          {'Dr.SBAI'}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -125,7 +126,7 @@ function ResponsiveAppBar({ onNavigate }) {
                 <PhoneIcon className="tel" />
               </IconButton>
             </Tooltip>
-            <Typography variant="body1" sx={{ color: "white", ml: 1 }}>
+            <Typography variant="h6" sx={{ color: "white", ml: 1 }}>
               +212661291579
             </Typography>
           </Box>
