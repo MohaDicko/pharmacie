@@ -33,4 +33,8 @@ app.use("/api", UserRoutes);
 const FormationRoutes = require("./routes/FormationRoutes");
 app.use("/api/formations", FormationRoutes);
 
+
+const MailingRoutes = require("./routes/MailingRoutes");
+app.use('/api', MailingRoutes);
+
 app.listen(8000, () => console.log(`server is running on port 8000`));
