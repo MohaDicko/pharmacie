@@ -27,6 +27,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import ReactPlayer from "react-player";
 import DoneAllIcon from "@mui/icons-material/DoneAll";
 import BackCards from "../images/wavesCards.svg";
+import Backcircle from "../images/circle-scatter-haikei.svg";
 // Styled component for hover effect
 const CustomCard = styled(Card)(({ theme }) => ({
   transition: "0.3s",
@@ -36,7 +37,6 @@ const CustomCard = styled(Card)(({ theme }) => ({
   backgroundImage: `url(${BackCards})`,
   backgroundSize: "cover",
   backgroundPosition: "bottom",
-
 }));
 
 // Styled component for social link background
@@ -52,21 +52,28 @@ const SocialLink = styled("a")(({ theme, gradient }) => ({
   textDecoration: "none",
 }));
 
-function PresentationSection() {
+function PresentationSection({ onNavigate }) {
   return (
     <>
-    <Box  sx={{ backgroundColor : theme.palette.one.main}}>
-
-    <Container sx={{ py: 3 }}>
-        <Fade direction="up" className="">
-          <Typography
-            variant="h2"
-            component="h2"
-            textAlign="start"
-            gutterBottom
-          >
-            Mohamed Sbai
-          </Typography>
+      <Box
+        sx={{
+          backgroundColor: theme.palette.one.main,
+          backgroundImage: `url(${Backcircle})`,
+          backgroundSize: "cover",
+        }}
+      >
+        <Container sx={{ py: 3 }} maxWidth={"md"}>
+          <Fade direction="up" className="">
+            <Typography
+              variant="h2"
+              component="h2"
+              textAlign="start"
+              gutterBottom
+              sx={{ color: theme.palette.four.main, fontWeight: "bold" }}
+            >
+              Mohamed Sbai
+            </Typography>
+          </Fade>
           <Typography
             variant="h4"
             component="h2"
@@ -75,141 +82,152 @@ function PresentationSection() {
           >
             Hypnopraticien, Energicien, coach psychoemotionnel & formateur
           </Typography>
-        </Fade>
-        <Container maxWidth={"md"} className="text-center p-2">
-          <div className="player-wrapper">
-            <h4>Vidéo de présentation</h4>
-            <br />
-            <Paper sx={{ p: 3, mb: 4 }}>
-              <ReactPlayer
-                className="react-player rounded-lg"
-                url="chemin/vers/votre/video.mp4"
-                width="100%"
-                height="100%"
-                controls={true}
-                // playing={true}
-                light={true}
-                pip={true}
-              />
-            </Paper>
-          </div>
 
-          <div className="flex items-center gap-4 justify-end mb-6">
-            <SocialLink
-              href="https://www.instagram.com/sbai_mohamed01/"
-              target="_blank"
-              rel="noopener noreferrer"
-              gradient="linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)"
-            >
-              <InstagramIcon />
-            </SocialLink>
-            <SocialLink
-              href="https://www.tiktok.com/@sbai.mohamedhypnose"
-              target="_blank"
-              rel="noopener noreferrer"
-              gradient="linear-gradient(45deg, #69C9D0, #010101)"
-            >
-              <FaTiktok />
-            </SocialLink>
-          </div>
-          <hr />
-          <Typography
-            variant="h3"
-            component="h2"
-            textAlign="start"
-            gutterBottom
-          >
-            Que peut vous apporter l'hypnose ?
-          </Typography>
-          <List sx={{ ml: 2 }}>
-            {[
-              "Se libérer de la peur",
-              "Traiter les sources de l'anxiété et du stress",
-              "Rompre avec les attachements toxiques",
-              "Prendre du recul face à des événements douloureux",
-              "Guérir et se réconcilier avec son enfant intérieur",
-              "Renforcer l'estime de soi",
-              "Se recentrer sur soi",
-              "Retrouver un sommeil apaisé",
-              "Booster son potentiel",
-            ].map((text, index) => (
-              <ListItem key={index}>
-                <ListItemText
-                  primary={
-                    <Box display="flex" alignItems="center" gap={1}>
-                      <DoneAllIcon />
-                      {text}
-                    </Box>
-                  }
+          <Container className="text-center p-2">
+            <div className="player-wrapper">
+              <h4>Vidéo de présentation</h4>
+              <br />
+              <Paper sx={{ p: 3, mb: 4 }}>
+                <ReactPlayer
+                  className="react-player rounded-lg"
+                  url="chemin/vers/votre/video.mp4"
+                  width="100%"
+                  height="100%"
+                  controls={true}
+                  // playing={true}
+                  light={true}
+                  pip={true}
                 />
-              </ListItem>
-            ))}
-          </List>
-        </Container>
-        <Typography variant="h3" component="h2" textAlign="start" gutterBottom>
-          Accompagnements 
-        </Typography>
+              </Paper>
+            </div>
 
-        <Grid container spacing={3} mt={3}>
-          {[
-            {
-              Icon: AnchorIcon,
-              title: "Libération des freins émotionnels",
-              description:
-                "Transformez vos peurs, anxiétés et manque de confiance en forces motrices.",
-            },
-            {
-              Icon: GroupIcon,
-              title: "Constellation familiale harmonisante",
-              description:
-                "Débarrassez-vous des schémas répétitifs et des poids familiaux pour une vie plus légère.",
-            },
-            {
-              Icon: SpaIcon,
-              title: "Bien-être et relaxation",
-              description:
-                "Atteignez une détente profonde et un bien-être durable grâce à des techniques avancées.",
-            },
-          ].map((service, index) => (
-            <Grid item xs={12} md={4} key={index}>
-              <Slide direction="down">
-                <CustomCard>
-                  <CardContent
-                    sx={{
-                      textAlign: "center",
-                      display: "flex",
-                      flexDirection: "column",
-                      alignItems: "center",
-                    }}
-                  >
-                    <service.Icon size={30} style={{ marginBottom: 10 }} />
-                    <Typography
-                      variant="h5"
-                      component="h3"
-                      className="line-clamp-1"
-                    >
-                      {service.title}
-                    </Typography>
-                    <Typography className="line-clamp-2">
-                      {service.description}
-                    </Typography>
-                  </CardContent>
-                </CustomCard>
-              </Slide>
+            <div className="flex items-center gap-4 justify-end mb-6">
+              <SocialLink
+                href="https://www.instagram.com/sbai_mohamed01/"
+                target="_blank"
+                rel="noopener noreferrer"
+                gradient="linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)"
+              >
+                <InstagramIcon />
+              </SocialLink>
+              <SocialLink
+                href="https://www.tiktok.com/@sbai.mohamedhypnose"
+                target="_blank"
+                rel="noopener noreferrer"
+                gradient="linear-gradient(45deg, #69C9D0, #010101)"
+              >
+                <FaTiktok />
+              </SocialLink>
+            </div>
+            <hr />
+            <Typography
+              variant="h3"
+              component="h2"
+              textAlign="start"
+              gutterBottom
+            >
+              Que peut vous apporter l'hypnose ?
+            </Typography>
+            <List sx={{ ml: 2 }}>
+              {[
+                "Se libérer de la peur",
+                "Traiter les sources de l'anxiété et du stress",
+                "Rompre avec les attachements toxiques",
+                "Prendre du recul face à des événements douloureux",
+                "Guérir et se réconcilier avec son enfant intérieur",
+                "Renforcer l'estime de soi",
+                "Se recentrer sur soi",
+                "Retrouver un sommeil apaisé",
+                "Booster son potentiel",
+              ].map((text, index) => (
+                <ListItem key={index}>
+                  <ListItemText
+                    primary={
+                      <Box display="flex" alignItems="center" gap={1}>
+                        <DoneAllIcon />
+                        {text}
+                      </Box>
+                    }
+                  />
+                </ListItem>
+              ))}
+            </List>
+            {/* <Container>
+              <Typography
+                variant="h3"
+                component="h2"
+                textAlign="start"
+                gutterBottom
+              >
+                Accompagnements
+              </Typography>
+            </Container> */}
+
+            <Grid container spacing={3} mt={3}>
+              {[
+                {
+                  Icon: AnchorIcon,
+                  title: "Libération des freins émotionnels",
+                  description:
+                    "Transformez vos peurs, anxiétés et manque de confiance en forces motrices.",
+                },
+                {
+                  Icon: GroupIcon,
+                  title: "Constellation familiale harmonisante",
+                  description:
+                    "Débarrassez-vous des schémas répétitifs et des poids familiaux pour une vie plus légère.",
+                },
+                {
+                  Icon: SpaIcon,
+                  title: "Bien-être et relaxation",
+                  description:
+                    "Atteignez une détente profonde et un bien-être durable grâce à des techniques avancées.",
+                },
+              ].map((service, index) => (
+                <Grid item xs={12} md={4} key={index}>
+                  <Slide direction="down">
+                    <CustomCard>
+                      <CardContent
+                        sx={{
+                          textAlign: "center",
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                        }}
+                      >
+                        <service.Icon size={30} style={{ marginBottom: 10 }} />
+                        <Typography
+                          variant="h5"
+                          component="h3"
+                          className="line-clamp-1"
+                        >
+                          {service.title}
+                        </Typography>
+                        <Typography className="line-clamp-2">
+                          {service.description}
+                        </Typography>
+                      </CardContent>
+                    </CustomCard>
+                  </Slide>
+                </Grid>
+              ))}
             </Grid>
-          ))}
-        </Grid>
-        <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
-          <Link to={"/"}>
-            <button className="bn54 p-3">
-              <span className="bn54span">Prenez un rendez-vous</span>
-            </button>
-          </Link>
-        </Box>
-      </Container>
-    
-    </Box>
-    <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
+          </Container>
+          <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
+            <Link to={"/"}>
+              <button
+                className="bn54 p-3"
+                onClick={() => {
+                  onNavigate("contact-section");
+                }}
+              >
+                <span className="bn54span">Prenez un rendez-vous</span>
+              </button>
+            </Link>
+          </Box>
+        </Container>
+      </Box>
+      <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
         <Typography variant="h3" component="h2" gutterBottom>
           Rencontrez Mohamed Sbai
           <Box
@@ -221,7 +239,7 @@ function PresentationSection() {
               backgroundSize: "cover",
             }}
           >
-            <Slide direction="right">
+            <Slide direction="left">
               <img
                 src={PhotoSbai}
                 alt="Mohamed Sbai"

@@ -4,15 +4,15 @@ import {
   Typography,
   Card,
   CardContent,
-  Grid,
   Box,
   Chip,
+  Tooltip,
 } from "@mui/material";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
-import { format } from "date-fns"; // Assurez-vous d'installer date-fns si ce n'est pas déjà fait
+import { format } from "date-fns";
 import { useTheme } from "@emotion/react";
 
 function FormationsSection() {
@@ -29,7 +29,6 @@ function FormationsSection() {
 
     fetchFormations();
   }, []);
-
   const settings = {
     dots: true,
     infinite: true,
@@ -60,9 +59,9 @@ function FormationsSection() {
   };
 
   return (
-    <Box sx={{ backgroundColor : theme.palette.one.main}}>
+    <Box sx={{ backgroundColor: theme.palette.one.main, overflow: 'hidden' }}>
       <Container sx={{ py: 5 }}>
-        <Typography variant="h3" component="h2" textAlign="start" gutterBottom>
+        <Typography variant="h3" sx={{ color: theme.palette.four.main, fontWeight: "bold" }} component="h2" textAlign="start" gutterBottom>
           Formations
         </Typography>
         <Slider {...settings}>
@@ -73,27 +72,25 @@ function FormationsSection() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <Card raised sx={{ maxWidth: 345, m: 2 }}>
+              <Card raised sx={{ maxWidth: 345, m: 2, boxShadow: 3 }}>
                 <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {formation.title}
-                  </Typography>
-                  <Typography
-                    variant="body2"
-                    color="text.secondary"
-                    sx={{ mb: 2 }}
-                  >
-                    {formation.description}
-                  </Typography>
-                  <Box
-                    display="flex"
-                    justifyContent="space-between"
-                    alignItems="center"
-                  >
-                    <Chip label={`${formation.price} €`} color="primary" />
-                    <Typography variant="body2" color="text.secondary">
-                      {format(new Date(formation.dateFormation), "dd/MM/yyyy")}
+                  <Tooltip title={formation.title}>
+                    <Typography gutterBottom variant="h5" component="div" className="line-clamp-1">
+                      {formation.title}
                     </Typography>
+                  </Tooltip>
+                  <Tooltip title={formation.description}>
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}  className="line-clamp-1">
+                      {formation.description}
+                    </Typography>
+                  </Tooltip>
+                  <Box display="flex" justifyContent="space-between" alignItems="center">
+                    <Chip label={`${formation.price} Dh`} color="primary" />
+                    <Tooltip title="Date de la formation">
+                      <Typography variant="body2" color="text.secondary">
+                        {format(new Date(formation.dateFormation), "dd/MM/yyyy")}
+                      </Typography>
+                    </Tooltip>
                   </Box>
                 </CardContent>
               </Card>

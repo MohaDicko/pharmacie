@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Box, TextField, Button, Typography, Container } from "@mui/material";
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import { useTheme } from "@emotion/react";
+
 function ContactSection() {
   const [formData, setFormData] = useState({
     email: "",
@@ -8,7 +10,7 @@ function ContactSection() {
     html: "",
     subject: "",
   });
-
+const theme = useTheme();
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -26,7 +28,7 @@ function ContactSection() {
 
   return (
     <Container sx={{py : 9}}>
-      <Typography variant="h3" component="h2" textAlign="start"  gutterBottom>
+      <Typography variant="h3" component="h2" textAlign="start"  sx={{ color: theme.palette.four.main, fontWeight: "bold" }}   gutterBottom>
         Contactez-nous ou Prenez un rendez-vous
       </Typography>
 

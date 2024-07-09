@@ -19,7 +19,7 @@ function Home() {
         <HeroSection />
       </div>
       <div id="presentation-section">
-        <PresentationSection />
+        <PresentationSection  onNavigate={scrollToSection}  />
       </div>
    
       <div id="seances-section">

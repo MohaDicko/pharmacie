@@ -19,6 +19,7 @@ import image2 from "../images/testimonialIG/2.jpeg";
 import image3 from "../images/testimonialIG/3.jpeg";
 import image4 from "../images/testimonialIG/4.jpeg";
 import image5 from "../images/testimonialIG/5.jpeg";
+import { useTheme } from "@emotion/react";
 
 // Mise à jour du tableau pour utiliser les images importées
 const testimonials = [
@@ -31,6 +32,7 @@ const testimonials = [
 ];
 
 function Testimonials() {
+  const theme = useTheme();
   const settings = {
     dots: true,
     infinite: true,
@@ -62,14 +64,16 @@ function Testimonials() {
 
   return (
     <>
-      <Container>
-        <Grid container spacing={3} mt={3}>
+    <Box sx={{backgroundColor : theme.palette.two.main}}>
+    <Container>
+        <Grid container spacing={3} mt={0}>
           <Grid item xs={12} md={12} key={"title"}>
             <Typography
               variant="h3"
               component="h2"
               textAlign="start"
               gutterBottom
+              sx={{ color: theme.palette.four.main, fontWeight: "bold" }} 
             >
               Intérventions et Live Radio
             </Typography>
@@ -110,6 +114,8 @@ function Testimonials() {
               component="h2"
               textAlign="start"
               gutterBottom
+              sx={{ color: theme.palette.four.main, fontWeight: "bold" }} 
+
             >
               Témoignages
             </Typography>
@@ -144,6 +150,8 @@ function Testimonials() {
           </Grid>
         </Grid>
       </Container>
+    </Box>
+   
     </>
   );
 }
