@@ -4,16 +4,12 @@ dotenv.config();
 const smtpTransport = require("nodemailer-smtp-transport");
 
 const transporter = nodemailer.createTransport({
-  host: "mail.sbai.ma",
-  port: 587,
-  secure: false,
+service : 'gmail',
   auth: {
     user: process.env.EMAIL,
     pass: process.env.PASSMAIL,
   },
-  tls: {
-    rejectUnauthorized: false,
-  },
+
 });
 
 const ccEmail = process.env.EMAIL;

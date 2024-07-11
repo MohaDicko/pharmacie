@@ -3,9 +3,9 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image1 from "../images/Clinical-hypnotherapy.webp";
-import Image2 from "../images/hypnotherapy2.jpg";
-import Image3 from "../images/3hero.webp";
+import Image1 from "../images/X1.jpg";
+import Image2 from "../images/X2.jpg";
+import Image3 from "../images/X3.jpg";
 
 function HeroSection() {
   var settings = {
@@ -25,15 +25,15 @@ function HeroSection() {
       <Slider {...settings}>
         <div className="image-container">
           <img src={Image1} alt="Image1" />
-          <h3>Hypnothérapie axée sur les solutions</h3>
+          <h3>Votre bien etre, notre priorité à la pharmacie!</h3>
         </div>
         <div className="image-container">
           <img src={Image2} alt="Image2" />
-          <h3>Calme, confiance en soi</h3>
+          <h3> Pour une santé de fer, rendez vous à la pharmacie! </h3>
         </div>
         <div className="image-container">
           <img src={Image3} alt="Image3" />
-          <h3>L'hypnothérapie pourrait être la solution...</h3>
+          <h3> Votre santé, notre engagement à la pharmacie ! </h3>
         </div>
       </Slider>
     </div>

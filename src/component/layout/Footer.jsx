@@ -55,8 +55,7 @@ const Footer = () => {
                 </IconButton>
               </Box>
               <Typography variant="body2" color="text.secondary" mt={2}>
-                "L'esprit est comme un parachute. Il ne fonctionne que lorsqu'il
-                est ouvert."
+              "Votre santé, notre priorité : Bienvenue à la Pharmacie Humaine!"
               </Typography>
             </Grid>
             <Grid item xs={12} sm={8}>
@@ -88,20 +87,16 @@ const Footer = () => {
               >
                 Made with ❤️ by{" "}
                 <Link
-                  href="https://yelmouss.vercel.app"
+                  href="https://mdicko.vercel.app"
                   target={"_blank"}
                   color="inherit"
                 >
-                  Yelmouss
+                  Mohamed DICKO
                 </Link>{" "}
-                &{" "}
-                <Link
-                  href="https://gotodev.ma"
-                  target={"_blank"}
-                  color="inherit"
-                >
-                  Gotodev
-                </Link>
+                
+                
+        
+                
               </Typography>
             </Grid>
           </Grid>
