@@ -71,7 +71,7 @@ function PresentationSection({ onNavigate }) {
               gutterBottom
               sx={{ color: theme.palette.four.main, fontWeight: "bold" }}
             >
-              Mohamed Sbai
+              Dr Mohamed DICKO
             </Typography>
           </Fade>
           <Typography
@@ -80,7 +80,7 @@ function PresentationSection({ onNavigate }) {
             textAlign="start"
             gutterBottom
           >
-            Hypnopraticien, Energicien, coach psychoemotionnel & formateur
+            Docteur en pharmacie 
           </Typography>
 
           <Container className="text-center p-2">
@@ -126,19 +126,19 @@ function PresentationSection({ onNavigate }) {
               textAlign="start"
               gutterBottom
             >
-              Que peut vous apporter l'hypnose ?
+              Nos activités 
             </Typography>
             <List sx={{ ml: 2 }}>
               {[
-                "Se libérer de la peur",
-                "Traiter les sources de l'anxiété et du stress",
-                "Rompre avec les attachements toxiques",
-                "Prendre du recul face à des événements douloureux",
+                "La distribution des médicaments",
+                "Conseil pharmaceutique",
+                "Vente de produit de santé",
+                "Service de santé",
                 "Guérir et se réconcilier avec son enfant intérieur",
-                "Renforcer l'estime de soi",
-                "Se recentrer sur soi",
-                "Retrouver un sommeil apaisé",
-                "Booster son potentiel",
+                "La gestion des ordonances",
+                "L'education à la santé",
+                
+                
               ].map((text, index) => (
                 <ListItem key={index}>
                   <ListItemText
@@ -229,7 +229,7 @@ function PresentationSection({ onNavigate }) {
       </Box>
       <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
         <Typography variant="h3" component="h2" gutterBottom>
-          Rencontrez Mohamed Sbai
+          Rencontrez Dr DICKO Mohamed 
           <Box
             component="span"
             sx={{
@@ -249,13 +249,12 @@ function PresentationSection({ onNavigate }) {
           </Box>
         </Typography>
         <Typography variant="h6" sx={{ textAlign: "justify", mt: 2, p: 3 }}>
-          Expert en hypnose, certifié par la Guilde Américaine des
-          Hypnothérapeutes et plusieurs écoles d'hypnothérapie. Avec plus de 20
-          ans d'expérience, il a aidé des centaines de clients à surmonter
-          divers problèmes, notamment l'anxiété, les phobies, les troubles de
-          l'alimentation, et les dépendances. Il utilise des techniques avancées
-          d'hypnothérapie pour offrir des résultats rapides et durables,
-          permettant à ses clients de vivre une vie plus épanouie et sereine.
+        "Dans l'univers des soins de santé, DK Pharma incarne l'excellence.
+         Située au cœur de notre communauté, DK Pharma est bien plus qu'une simple pharmacie : c'est un pilier de soutien pour la santé et le bien-être.
+         Notre équipe dévouée de pharmaciens qualifiés et empathiques est là pour vous guider à chaque étape, que ce soit pour répondre à vos questions sur vos prescriptions,
+         vous conseiller sur des produits de santé ou vous offrir un service personnalisé. 
+         Chez DK Pharma, nous nous engageons à fournir des soins de qualité supérieure, avec une touche personnelle qui fait toute la différence.
+         Bienvenue chez DK Pharma, où votre santé est notre priorité absolue."
         </Typography>
       </Box>
     </>

@@ -6,10 +6,10 @@ const myCustomColors = {
     primary: "#112D4E",
     secondary: "#DBE2EF",
     white: "#F9F7F7",
-    one: "#F9F7F7",
-    two: "#DBE2EF",
-    three: "#3F72AF",
-    four: "#112D4E",
+    one: "#F6E9B2",
+    two: "#F3CA52",
+    three: "#7ABA78",
+    four: "#0A6847",
     five: "#E1E5EE",
 };
 

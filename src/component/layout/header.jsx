@@ -133,13 +133,13 @@ function ResponsiveAppBar({ onNavigate }) {
               <IconButton
                 sx={{ color: "white" }}
                 component="a"
-                href="tel:+212661291579"
+                href="tel:+22374132032"
               >
                 <PhoneIcon className="tel" />
               </IconButton>
             </Tooltip>
             <Typography variant="h6" sx={{ color: "white", ml: 1 }}>
-              +212661291579
+              +22374132032
             </Typography>
           </Box>
         </Toolbar>
