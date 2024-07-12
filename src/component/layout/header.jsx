@@ -70,7 +70,7 @@ function ResponsiveAppBar({ onNavigate }) {
             }}
             className="titleLogo"
           >
-            {"M.SBAI"}
+            {"Dr..."}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>

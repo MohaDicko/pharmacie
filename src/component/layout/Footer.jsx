@@ -73,7 +73,7 @@ const Footer = () => {
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 />
-                <Marker position={[34.020882, -6.84165]}>
+                <Marker position={[12.66447, -7.94898]}>
                   <Popup>We are here!</Popup>
                 </Marker>
               </MapContainer>
@@ -103,7 +103,7 @@ const Footer = () => {
         </Container>
       </Box>
       <a
-          href="https://wa.me/212661291579"
+          href="https://wa.me/22374132032"
           className="float"
           target="_blank"
           rel="noreferrer"
