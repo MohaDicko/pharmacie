@@ -134,7 +134,7 @@ function PresentationSection({ onNavigate }) {
                 "Conseil pharmaceutique",
                 "Vente de produit de santé",
                 "Service de santé",
-                "Guérir et se réconcilier avec son enfant intérieur",
+                
                 "La gestion des ordonances",
                 "L'education à la santé",
                 
