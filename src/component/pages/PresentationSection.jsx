@@ -16,7 +16,7 @@ import AnchorIcon from "@mui/icons-material/Anchor";
 import GroupIcon from "@mui/icons-material/Group";
 import SpaIcon from "@mui/icons-material/Spa";
 import { Link } from "react-router-dom";
-import PhotoSbai from "../images/0.png";
+import PhotoSbai from "../images/X2.jpg";
 import { styled } from "@mui/material/styles";
 import MyBlob from "../images/blob.svg";
 import { theme } from "../../ThemeProvider";
@@ -167,21 +167,21 @@ function PresentationSection({ onNavigate }) {
               {[
                 {
                   Icon: AnchorIcon,
-                  title: "Libération des freins émotionnels",
+                  title: "Pharma",
                   description:
-                    "Transformez vos peurs, anxiétés et manque de confiance en forces motrices.",
+                    "La santé est la plus grande richesse.",
                 },
                 {
                   Icon: GroupIcon,
-                  title: "Constellation familiale harmonisante",
+                  title: "Pharma",
                   description:
-                    "Débarrassez-vous des schémas répétitifs et des poids familiaux pour une vie plus légère.",
+                    "La pharmacie : un pont vers une vie plus saine.",
                 },
                 {
                   Icon: SpaIcon,
-                  title: "Bien-être et relaxation",
+                  title: "Pharma",
                   description:
-                    "Atteignez une détente profonde et un bien-être durable grâce à des techniques avancées.",
+                    "Ensemble, pour votre santé.",
                 },
               ].map((service, index) => (
                 <Grid item xs={12} md={4} key={index}>
@@ -221,7 +221,7 @@ function PresentationSection({ onNavigate }) {
                   onNavigate("contact-section");
                 }}
               >
-                <span className="bn54span">Prenez un rendez-vous</span>
+                <span className="bn54span">Faire une Precomande en ligne </span>
               </button>
             </Link>
           </Box>
@@ -229,7 +229,7 @@ function PresentationSection({ onNavigate }) {
       </Box>
       <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
         <Typography variant="h3" component="h2" gutterBottom>
-          Rencontrez Dr DICKO Mohamed 
+          DK Pharma
           <Box
             component="span"
             sx={{
@@ -242,19 +242,17 @@ function PresentationSection({ onNavigate }) {
             <Slide direction="left">
               <img
                 src={PhotoSbai}
-                alt="Mohamed Sbai"
+                alt="DK Pharma"
                 style={{ height: 300, maxWidth: "100%" }}
               />
             </Slide>
           </Box>
         </Typography>
         <Typography variant="h6" sx={{ textAlign: "justify", mt: 2, p: 3 }}>
-        "Dans l'univers des soins de santé, DK Pharma incarne l'excellence.
-         Située au cœur de notre communauté, DK Pharma est bien plus qu'une simple pharmacie : c'est un pilier de soutien pour la santé et le bien-être.
-         Notre équipe dévouée de pharmaciens qualifiés et empathiques est là pour vous guider à chaque étape, que ce soit pour répondre à vos questions sur vos prescriptions,
-         vous conseiller sur des produits de santé ou vous offrir un service personnalisé. 
-         Chez DK Pharma, nous nous engageons à fournir des soins de qualité supérieure, avec une touche personnelle qui fait toute la différence.
-         Bienvenue chez DK Pharma, où votre santé est notre priorité absolue."
+        "Chez DK Pharma, nous rendons votre expérience de 
+        commande de médicaments plus pratique que jamais.
+        Notre service de précommande en ligne vous permet de planifier
+        à l'avance et de recevoir vos médicaments sans tracas, directement à votre porte"
         </Typography>
       </Box>
     </>

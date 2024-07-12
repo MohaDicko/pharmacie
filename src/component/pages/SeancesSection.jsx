@@ -10,8 +10,8 @@ import {
   Box,
   CardMedia
 } from "@mui/material";
-import M1 from "../images/M1.webp";
-import M3 from "../images/M3.webp";
+import M1 from "../images/A4.jpg";
+import M3 from "../images/A2.jpg";
 import { useTheme } from "@emotion/react";
 import ReactPlayer from "react-player";
 
@@ -30,15 +30,15 @@ function SeancesSection() {
   };
 
   const tooltipTexts = [
-    "Lors d'une séance d'hypnose en présentiel avec Mohamed Sbai, dans le confort de son cabinet situé à Rabat Maroc, chaque moment devient une immersion profonde...",
-    "Lors d'une séance d'hypnose en ligne avec Mohamed Sbai, vous pouvez profiter du confort de votre maison tout en travaillant sur vous même...",
-    "Découvrez les bienfaits de l'hypnose à travers cette vidéo explicative.",
+    "...............",
+    "...............",
+    "...............",
   ];
 
   const images = [M3, M1, ""];
   const titles = [
-    "Séance d'hypnose en presentiel",
-    "Séance d'hypnose en ligne",
+    "Tensiométrie",
+    "Glycémie",
     "Vidéo Live session",
   ];
 
@@ -58,7 +58,7 @@ function SeancesSection() {
                 />
                 {index === 2 ? (
                   <ReactPlayer
-                    url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    url="https://www.youtube.com/watch?v=yUpGOPueQAc"
                     style={imageStyle}
                     controls
                   />
