@@ -71,7 +71,7 @@ function PresentationSection({ onNavigate }) {
               gutterBottom
               sx={{ color: theme.palette.four.main, fontWeight: "bold" }}
             >
-              Dr Mohamed DICKO
+              Dr KEITA Oumou TOUNKARA
             </Typography>
           </Fade>
           <Typography
@@ -229,7 +229,7 @@ function PresentationSection({ onNavigate }) {
       </Box>
       <Box sx={{ bgcolor: theme.palette.two.main, p: 6 }}>
         <Typography variant="h3" component="h2" gutterBottom>
-          DK Pharma
+          Pharmacie KAMSIR
           <Box
             component="span"
             sx={{
@@ -249,7 +249,7 @@ function PresentationSection({ onNavigate }) {
           </Box>
         </Typography>
         <Typography variant="h6" sx={{ textAlign: "justify", mt: 2, p: 3 }}>
-        "Chez DK Pharma, nous rendons votre expérience de 
+        "Chez Pharmacie Kamsir, nous rendons votre expérience de 
         commande de médicaments plus pratique que jamais.
         Notre service de précommande en ligne vous permet de planifier
         à l'avance et de recevoir vos médicaments sans tracas, directement à votre porte"

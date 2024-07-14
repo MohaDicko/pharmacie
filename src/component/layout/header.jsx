@@ -70,7 +70,7 @@ function ResponsiveAppBar({ onNavigate }) {
             }}
             className="titleLogo"
           >
-            {"Dr..."}
+            {"Pharmacie Kamsir"}
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -133,13 +133,13 @@ function ResponsiveAppBar({ onNavigate }) {
               <IconButton
                 sx={{ color: "white" }}
                 component="a"
-                href="tel:+22374132032"
+                href="tel:20241942"
               >
                 <PhoneIcon className="tel" />
               </IconButton>
             </Tooltip>
             <Typography variant="h6" sx={{ color: "white", ml: 1 }}>
-              +22374132032
+            20241942
             </Typography>
           </Box>
         </Toolbar>

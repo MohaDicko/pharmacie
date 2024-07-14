@@ -75,7 +75,7 @@ function Testimonials() {
               gutterBottom
               sx={{ color: theme.palette.four.main, fontWeight: "bold" }} 
             >
-              Intérventions et Live Radio
+              Intérventions 
             </Typography>
             <Grid container spacing={3} mt={3}>
               <Grid item xs={12} md={6} key={"video"}>

@@ -46,7 +46,8 @@ function SeancesSection() {
     <Box>
       <Container sx={{ py: 9 }}>
         <Typography variant="h3" sx={{ color: theme.palette.four.main, fontWeight: "bold" }} component="h2" textAlign="start" gutterBottom>
-          Séances
+          Services 
+           
         </Typography>
         <Grid container spacing={3} mt={3}>
           {titles.map((title, index) => (
