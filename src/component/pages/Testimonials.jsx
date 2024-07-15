@@ -1,159 +1,59 @@
-import React from "react";
-import {
-  Card,
-  Box,
-  Grid,
-  Container,
-  Typography,
-  Paper,
-  CardContent,
-} from "@mui/material";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ReactPlayer from "react-player";
-import HalimaVideo from "../images/halimaalaoui.mp4";
-import Intervention from "../images/intevention.mp4";
-import image1 from "../images/testimonialIG/1.jpeg";
-import image2 from "../images/testimonialIG/2.jpeg";
-import image3 from "../images/testimonialIG/3.jpeg";
-import image4 from "../images/testimonialIG/4.jpeg";
-import image5 from "../images/testimonialIG/5.jpeg";
-import { useTheme } from "@emotion/react";
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-// Mise à jour du tableau pour utiliser les images importées
+// Importation des images locales
+import image1 from "../images/testimonialIG/Z1.png";
+import image2 from "../images/testimonialIG/Z2.png";// Correction de l'emplacement de l'image
+
 const testimonials = [
-  { image: image1 },
-  { image: image2 },
-  { image: image3 },
-  { image: image4 },
-  { image: image5 },
-  // Ajoutez d'autres images si nécessaire
+  {
+    name: 'Assi KEITA',
+    text: ' "Je suis très satisfait du service de la pharmacie. Le personnel est toujours aimable et compétent. Ils répondent toujours à mes questions et me conseillent bien sur mes médicaments. Je recommande cette pharmacie à tous mes amis et ma famille!"',
+    image: image1 // Utilisation de l'image importée
+  },
+  {
+    name: 'Jane Smith',
+    text: ' "J apprécie énormément l équipe de cette pharmacie. Ils sont toujours disponibles pour répondre à mes questions et me guider dans mes choix de produits de santé. Leur service est rapide et efficace, ce qui me facilite la vie. Je suis reconnaissante d avoir une pharmacie aussi fiable près de chez moi!"',
+    image: image2 // Utilisation de l'image importée
+  },
+  // Ajoutez plus de témoignages ici
 ];
 
-function Testimonials() {
-  const theme = useTheme();
+const TestimonialCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-    ],
+    autoplaySpeed: 3000,
   };
 
   return (
-    <>
-    <Box sx={{backgroundColor : theme.palette.two.main}}>
-    <Container>
-        <Grid container spacing={3} mt={0}>
-          <Grid item xs={12} md={12} key={"title"}>
-            <Typography
-              variant="h3"
-              component="h2"
-              textAlign="start"
-              gutterBottom
-              sx={{ color: theme.palette.four.main, fontWeight: "bold" }} 
-            >
-              Intérventions 
-            </Typography>
-            <Grid container spacing={3} mt={3}>
-              <Grid item xs={12} md={6} key={"video"}>
-                <Paper className="p-4">
-                  <ReactPlayer
-                    className="react-player rounded-lg"
-                    url={Intervention}
-                    width={"100%"}
-                    height={350}
-                    controls={true}
-                    pip={true}
-                    muted={true}
-                    // light={true}
-                  />
-                </Paper>
-              </Grid>
-              <Grid item xs={12} md={6} key={"video2"}>
-                <Paper className="p-4">
-                  <ReactPlayer
-                    className="react-player rounded-lg"
-                    url={HalimaVideo}
-                    width={"100%"}
-                    height={350}
-                    controls={true}
-                    pip={true}
-                    muted={true}
-                  />
-                </Paper>
-              </Grid>
-            </Grid>
-          </Grid>
-
-          <Grid item xs={12} md={12} key={"slider"}>
-            <Typography
-              variant="h3"
-              component="h2"
-              textAlign="start"
-              gutterBottom
-              sx={{ color: theme.palette.four.main, fontWeight: "bold" }} 
-
-            >
-              Témoignages
-            </Typography>
-            <Box sx={{ flexGrow: 1, padding: 5 }}>
-              <Slider {...settings}>
-                {testimonials.map((testimonial, index) => (
-                  <div key={index} className="p-6">
-                    <Card>
-                      <CardContent>
-                        <Box
-                          display="flex"
-                          flexDirection="column"
-                          alignItems="center"
-                          paddingBottom={2}
-                        >
-                          <img
-                            src={testimonial.image}
-                            alt={`Testimonial ${index + 1}`}
-                            style={{
-                              width: "100%",
-                              height: 300,
-                              objectFit: "contain",
-                            }}
-                          />
-                        </Box>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ))}
-              </Slider>
-            </Box>
-          </Grid>
-        </Grid>
-      </Container>
-    </Box>
-   
-    </>
+    <div className="container mx-auto py-8">
+      <h2 className="text-4xl font-bold text-center mb-8"> . </h2>
+      <Slider {...settings}>
+        {testimonials.map((testimonial, index) => (
+          <div key={index} className="p-4">
+            <div className="max-w-md mx-auto bg-tilexind-green rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+              <div className="md:flex">
+                <div className="md:flex-shrink-0">
+                  <img className="h-48 w-full object-cover md:w-48" src={testimonial.image} alt={testimonial.name} />
+                </div>
+                <div className="p-8">
+                  <div className="uppercase tracking-wide text-sm text-tilexind-green-dark font-semibold">{testimonial.name}</div>
+                  <p className="mt-2 text-tilexind-green-dark">{testimonial.text}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
-}
+};
 
-export default Testimonials;
+export default TestimonialCarousel;

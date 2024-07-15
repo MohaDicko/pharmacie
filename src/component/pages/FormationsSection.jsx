@@ -62,7 +62,7 @@ function FormationsSection() {
     <Box sx={{ backgroundColor: theme.palette.one.main, overflow: 'hidden' }}>
       <Container sx={{ py: 5 }}>
         <Typography variant="h3" sx={{ color: theme.palette.four.main, fontWeight: "bold" }} component="h2" textAlign="start" gutterBottom>
-          Formations
+          Temoignages 
         </Typography>
         <Slider {...settings}>
           {formations.map((formation) => (

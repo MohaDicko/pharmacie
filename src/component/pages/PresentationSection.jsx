@@ -242,7 +242,7 @@ function PresentationSection({ onNavigate }) {
             <Slide direction="left">
               <img
                 src={PhotoSbai}
-                alt="DK Pharma"
+                alt="Kamsir"
                 style={{ height: 300, maxWidth: "100%" }}
               />
             </Slide>
