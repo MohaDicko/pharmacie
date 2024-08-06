@@ -103,7 +103,7 @@ function PresentationSection({ onNavigate }) {
 
             <div className="flex items-center gap-4 justify-end mb-6">
               <SocialLink
-                href="https://www.instagram.com/sbai_mohamed01/"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 gradient="linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)"
@@ -111,7 +111,7 @@ function PresentationSection({ onNavigate }) {
                 <InstagramIcon />
               </SocialLink>
               <SocialLink
-                href="https://www.tiktok.com/@sbai.mohamedhypnose"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
                 gradient="linear-gradient(45deg, #69C9D0, #010101)"
